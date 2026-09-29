@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Testing React State Arrays
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small React application for practicing state management, array updates, and
+component testing with React Testing Library.
 
-## Available Scripts
+The app renders a list of items and provides controls to add a new item or
+remove an existing item. It is intended as a focused course exercise for
+learning how immutable array updates affect the UI.
 
-In the project directory, you can run:
+## Learning goals
 
-### `npm start`
+- Store an array in component state with `useState`.
+- Add items without mutating the existing state.
+- Remove items with `Array.prototype.filter`.
+- Test rendered content and user interactions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Built with
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [React](https://react.dev/)
+- [Create React App](https://create-react-app.dev/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Jest](https://jestjs.io/)
 
-### `npm test`
+## Getting started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- [Node.js](https://nodejs.org/) and npm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository.
+2. Change into the project directory.
+3. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+### Start the development server
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open [http://localhost:3000](http://localhost:3000) in a browser. The page
+reloads automatically when source files change.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Available scripts
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Command | Description |
+| --- | --- |
+| `npm start` | Start the development server. |
+| `npm test` | Run the test suite in interactive watch mode. |
+| `npm run build` | Create an optimized production build in `build/`. |
+| `npm run eject` | Eject from Create React App configuration. This is irreversible. |
 
-## Learn More
+## Project structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```text
+src/
+├── App.js          # Root component
+├── TestCard.js     # Stateful item-list exercise
+├── App.test.js     # Component tests
+└── index.js        # Application entry point
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Testing
 
-### Code Splitting
+Run the test suite with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm test
+```
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Use the existing tests as a starting point for adding coverage around adding
+and removing items.
